@@ -36,7 +36,10 @@ export default class CustomDocument extends Document<DocumentProps> {
             }}
           />
           {/* Start VWO Async V3.0 SmartCode */}
-          <link rel="preconnect" href="https://dev.visualwebsiteoptimizer.com" />
+          <link
+            rel="preconnect"
+            href="https://dev.visualwebsiteoptimizer.com"
+          />
           <script
             type="text/javascript"
             id="vwoCode"
