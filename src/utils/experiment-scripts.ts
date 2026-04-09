@@ -5,7 +5,8 @@ export const ABTASTY_PRODUCTS_SMARTCODE_SRC =
 export const ABTASTY_PRODUCTS_SCRIPT_ID = "abtasty-smartcode-products";
 
 /** VWO Async smartcode account (default / all pages except products migration). */
-export const VWO_ACCOUNT_ID_DEFAULT = 1216670;
+//export const VWO_ACCOUNT_ID_DEFAULT = 1216670;
+export const VWO_ACCOUNT_ID_DEFAULT = 1218890;
 
 /** VWO account when `/products?vwoMigration=true`. */
 export const VWO_ACCOUNT_ID_PRODUCTS_MIGRATION = 1217606;
