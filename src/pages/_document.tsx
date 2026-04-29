@@ -26,6 +26,8 @@ export default class CustomDocument extends Document<DocumentProps> {
     return (
       <Html lang="en">
         <Head>
+          {/* VWO Smartcode - loads synchronously on all pages */}
+          <script src="https://dev.visualwebsiteoptimizer.com/tag/1202926.js" />
           {/* We only want to add the scripts if in production */}
           {isProduction && (
             <>
