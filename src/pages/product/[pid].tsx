@@ -1,5 +1,5 @@
 import type { GetServerSideProps } from "next";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import Breadcrumb from "@/components/breadcrumb";
 import Footer from "@/components/footer";
@@ -13,6 +13,7 @@ import type { ProductType } from "@/types";
 
 import Layout from "../../layouts/Main";
 import { server } from "../../utils/server";
+import { trackVWOEvent } from "../../utils/vwo";
 
 type ProductPageType = {
   product: ProductType;
@@ -32,6 +33,10 @@ export const getServerSideProps: GetServerSideProps = async ({ query }) => {
 
 const Product = ({ product }: ProductPageType) => {
   const [showBlock, setShowBlock] = useState("description");
+
+  useEffect(() => {
+    trackVWOEvent("productPageViewed", { pageName: product.name });
+  }, [product]);
 
   return (
     <Layout>
