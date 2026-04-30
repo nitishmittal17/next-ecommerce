@@ -9,6 +9,7 @@ import type { ProductStoreType, ProductType } from "@/types";
 
 import productsColors from "../../../utils/data/products-colors";
 import productsSizes from "../../../utils/data/products-sizes";
+import { trackVWOEvent } from "../../../utils/vwo";
 import CheckboxColor from "../../products-filter/form-builder/checkbox-color";
 
 type ProductContent = {
@@ -56,6 +57,7 @@ const Content = ({ product }: ProductContent) => {
     };
 
     dispatch(addProduct(productStore));
+    trackVWOEvent("productAdded", { productName: product.name });
   };
 
   return (
