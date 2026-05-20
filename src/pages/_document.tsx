@@ -28,6 +28,8 @@ export default class CustomDocument extends Document<DocumentProps> {
         <Head>
           {/* VWO Smartcode - loads synchronously on all pages */}
           <script src="https://dev.visualwebsiteoptimizer.com/tag/1226575.js" />
+          {/* Wandz */}
+          <script type="text/javascript" src="https://gs.wandzcdn.com/wandz/DEMOTAGW.js" async />
           {/* We only want to add the scripts if in production */}
           {isProduction && (
             <>
