@@ -28,7 +28,7 @@ export default class CustomDocument extends Document<DocumentProps> {
         <Head>
           {/* VWO Smartcode - loads synchronously on all pages */}
           {/* eslint-disable-next-line @next/next/no-sync-scripts -- VWO requires sync load */}
-          <script src="https://dev.visualwebsiteoptimizer.com/tag/1244121.js" />
+          <script src="https://edge.wingify.net/tag/1244121.js" />
           {/* Wandz
           <script
             type="text/javascript"
